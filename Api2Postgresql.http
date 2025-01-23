@@ -1,0 +1,6 @@
+@Api2Postgresql_HostAddress = http://localhost:5175
+
+GET {{Api2Postgresql_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
