@@ -10,9 +10,9 @@ namespace Api2Postgresql.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DataAutosController (AutosInterface autosInterface) : ControllerBase
+    public class AutosController (AutosInterface autosInterface) : ControllerBase
     {
-        // GET: api/<DataAutosController>
+        // GET: api/<AutosController>
         [HttpGet("get")]
         // read all
         public async Task <IActionResult> GetAutos()
@@ -25,7 +25,7 @@ namespace Api2Postgresql.Controllers
 
         }
 
-        // GET api/<DataAutosController>/5
+        // GET api/<AutosController>/5
         [HttpGet("get-single{id:int}")]
         // read single
         public async Task<IActionResult> GetAutos(int id)
@@ -37,7 +37,7 @@ namespace Api2Postgresql.Controllers
                 return Ok(autos);
         }
 
-        // POST api/<DataAutosController>
+        // POST api/<AutosController>
         [HttpPost("add")]
         // create
         public async Task <IActionResult> Create(Autos autos)
@@ -50,7 +50,7 @@ namespace Api2Postgresql.Controllers
 
         }
 
-        // PUT api/<DataAutosController>/5
+        // PUT api/<AutosController>/5
         [HttpPut("update")]
         //actualizar
         public async Task<IActionResult> UpdateAsync(Autos autos)
@@ -63,7 +63,7 @@ namespace Api2Postgresql.Controllers
 
         }
 
-        // DELETE api/<DataAutosController>/5
+        // DELETE api/<AutosController>/5
         [HttpDelete("delete /{id}")]
         public async Task<IActionResult> DeleteAsync(int id)
         {
