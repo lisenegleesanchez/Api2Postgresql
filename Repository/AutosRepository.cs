@@ -45,7 +45,8 @@ namespace Api2Postgresql.Repository
         {
             var getAutos = await context.MarcaAutos.FirstOrDefaultAsync(_ => _.Id == auto.Id);
 
-            if (getAutos != null) {
+            if (getAutos != null)
+            {
 
                 getAutos.Marca =auto.Marca;
                 getAutos.Modelo = auto.Modelo;

@@ -64,7 +64,7 @@ namespace Api2Postgresql.Controllers
         }
 
         // DELETE api/<AutosController>/5
-        [HttpDelete("delete /{id}")]
+        [HttpDelete("delete/{id}")]
         public async Task<IActionResult> DeleteAsync(int id)
         {
             var result = await autosInterface.DeleteAsync(id);
